@@ -12,13 +12,13 @@ class OddorevenEnv(gym.Env):
     self.observation_space = spaces.Discrete(5)
     self.seed()
 
-  def seed(self, seed=None):
+  def _seed(self, seed=None):
     self.np_random, seed = seeding.np_random(seed)
     return [seed]    
    
   
   def _step(self, action):
-    return 0     
+    return 0, 0, 0, {} 
 
   def _reset(self):
     return 0     
